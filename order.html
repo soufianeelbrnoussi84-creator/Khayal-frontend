@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="title"><img src="pictures/jersey-title.png" alt=""></h1>
+    </div>
+    <div class="hero">
+        <form class="form-order">
+            <label for="Contact">Contact</label>
+            <input type="text" placeholder="Email or mobile phone number" id="Contact">
+            <span id="emailError" class="error"></span>
+            <h3>Delivery</h3>
+            <select name="pays">
+            <option value="maroc">Maroc</option>
+            </select><br><br>
+            <input type="text" placeholder="First name" id="firstName">
+            <span id="firstNameError" class="error"></span>
+            <input type="text" placeholder="Last name" id="lastName">
+            <span id="lastNameError" class="error"></span>
+            <input type="text" placeholder="Address" id="address">
+            <span id="addressError" class="error"></span>
+            <input type="text" placeholder="Apartment, suite, etc. (optional)">
+            <input type="text" placeholder="City" id="city">
+            <span id="cityError" class="error"></span>
+            <input type="text" placeholder="Phone" id="phone"> 
+            <span id="phoneError" class="error"></span>
+            <button type="button" onclick="confirmOrder()">Pay now</button>
+        </form>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>
