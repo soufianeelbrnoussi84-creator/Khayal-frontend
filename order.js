@@ -76,7 +76,7 @@ function confirmOrder() {
         quantity: 1
     }
 
-    fetch("http://localhost:8000/create_order",{
+    fetch("https://khayal-api-production.up.railway.app/create_order",{
         method: "POST",
         headers: {
             "Content-type": "application/json"

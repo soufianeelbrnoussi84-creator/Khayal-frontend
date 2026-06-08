@@ -188,5 +188,13 @@ width: 170px;
     .social-media {
         width: 90%;
         max-width: 350px;
+        padding: 10px;
     }
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
 }
