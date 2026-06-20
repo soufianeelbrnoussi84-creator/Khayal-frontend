@@ -168,7 +168,7 @@ button{
     width: 50px;
     height: 50px;
     border: 1px solid #ccc;
-    background: rgb(16, 16, 16);
+    background: rgb(9, 9, 9);
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
@@ -176,15 +176,15 @@ button{
 }
 
 .size-btn:hover {
-    background: #1a1a1a;
+    background: #6a600a;
     color: white;
-    border-color: #1a1a1a;
+    border-color: #8d7878;
 }
 
 #orderBtn {
     width: 100%;
     padding: 15px;
-    background: #1a1a1a;
+    background: #322e06;
     color: white;
     border: none;
     border-radius: 8px;
@@ -198,12 +198,29 @@ button{
     background: #8b6914;
 }
 
-
-
-
-
-
-
-
-
-
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .sidebar.open {
+        right: 0;
+    }
+    
+    #sidebarImg {
+        height: 200px;
+    }
+    
+    .size-btn {
+        width: 50px;
+        height: 40px;
+        font-size: 13px;
+    }
+    
+    #orderBtn {
+        padding: 12px;
+        font-size: 20px;
+        width: 250px;
+    }
+}
