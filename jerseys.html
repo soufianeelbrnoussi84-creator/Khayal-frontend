@@ -82,20 +82,30 @@
     <script src="jersey.js"></script>
 
     <div id="sidebar" class="sidebar">
-         <button onclick="hideSidebar()">✕</button>
-         <img id="sidebarImg" src="" alt="">
-         <h2 id="sidebarName"></h2>
-         <h3 id="sidebarPrice"></h3>
-         <div class="size-options">
-        <button class="size-btn">S</button>
-        <button class="size-btn">M</button>
-        <button class="size-btn">L</button>
-        <button class="size-btn">XL</button>
-        <button class="size-btn">2XL</button>
-        <button class="size-btn">3XL</button>
-        <button class="size-btn">4XL</button>
+        <button onclick="hideSidebar()" id="closeBtn">✕</button>
+        <img id="sidebarImg" src="" alt="">
+        <h2 id="sidebarName"></h2>
+        <h3 id="sidebarPrice"></h3>
+        <p id="selectedSize">Size: </p>
+        <span id="sizeError" class="error"></span>
+        <div class="size-options">
+        <button class="size-btn" onclick="selectSize(this)">S</button>
+        <button class="size-btn" onclick="selectSize(this)">M</button>
+        <button class="size-btn" onclick="selectSize(this)">L</button>
+        <button class="size-btn-big-size" onclick="selectSize(this)">XL</button>
+        <button class="size-btn-big-size" onclick="selectSize(this)">2XL</button>
+        <button class="size-btn-big-size" onclick="selectSize(this)">3XL</button>
+        <button class="size-btn-big-size" onclick="selectSize(this)">4XL</button>
         </div>
-        <button id="orderBtn">Order Now</button>
+        <div class="quantity-selector">
+        <button onclick="decreaseQty()">-</button>
+        <span id="quantity">1</span>
+        <button onclick="increaseQty()">+</button>
+        </div>
+    
+        <button id="orderBtn" onclick="orderNow()">Order Now</button>
+
+        
     </div>
 
 </body>

@@ -135,7 +135,7 @@ button{
 
 #sidebarImg {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: contain;
     display: block;
     margin: 20px auto;
@@ -165,17 +165,36 @@ button{
 }
 
 .size-btn {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 42px;
     border: 1px solid #ccc;
     background: rgb(9, 9, 9);
-    border-radius: 8px;
+    border-radius: 0px;
     cursor: pointer;
     font-size: 14px;
     transition: all 0.2s ease;
+    margin-top: 35px;
+}
+
+.size-btn-big-size {
+    width: 47px;
+    border: 1px solid #ccc;
+    background: rgb(9, 9, 9);
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+    margin-top: 35px;
+    
 }
 
 .size-btn:hover {
+    background: #6a600a;
+    color: white;
+    border-color: #8d7878;
+}
+
+.size-btn-big-size:hover {
     background: #6a600a;
     color: white;
     border-color: #8d7878;
@@ -187,21 +206,93 @@ button{
     background: #322e06;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 0px;
+    font-size: 18px;
     cursor: pointer;
     letter-spacing: 2px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 #orderBtn:hover {
     background: #8b6914;
 }
+ 
+#closeBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1a1a1a;
+    padding: 5px;
+    box-shadow: none;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    padding: 10px;
+    background: white;
+}
+
+.quantity-selector button {
+    width: 35px;
+    height: 35px;
+    background: #322e06;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: none;
+    letter-spacing: 0;
+}
+
+.quantity-selector button:hover {
+    background: #8b6914;
+}
+
+#quantity {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a1a1a;
+    min-width: 30px;
+    text-align: center;
+}
+
+.size-btn.selected{
+    background: rgb(157, 142, 2);
+    color: black;
+    width: 50px;
+}
+.size-btn-big-size.selected{
+    background: rgb(157, 142, 2);
+    color: black;
+    width: 50px;
+}
+
+.error{
+    color: red;
+    font-size: 16px;
+    display: block;
+    margin-top: 20px;
+}
+
+
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 100%;
-        right: -100%;
+        width: 75%;
+        right: -75%;
+        padding: 15px;
     }
     
     .sidebar.open {
@@ -209,18 +300,50 @@ button{
     }
     
     #sidebarImg {
-        height: 200px;
+        height: 180px;
+        margin: 10px auto;
+    }
+    
+    #sidebarName {
+        font-size: 16px;
+    }
+    
+    #sidebarPrice {
+        font-size: 16px;
     }
     
     .size-btn {
-        width: 50px;
-        height: 40px;
-        font-size: 13px;
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    
+    .size-btn-big-size {
+        width: 42px;
+        font-size: 10px;
+        margin-top: 20px;
     }
     
     #orderBtn {
         padding: 12px;
-        font-size: 20px;
-        width: 250px;
+        font-size: 14px;
+        margin-top: 15px;
+        letter-spacing: 1px;
+    }
+    
+    .quantity-selector {
+        gap: 15px;
+        padding: 8px;
+    }
+    
+    .quantity-selector button {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    #quantity {
+        font-size: 16px;
     }
 }
